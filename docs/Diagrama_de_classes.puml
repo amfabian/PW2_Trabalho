@@ -1,0 +1,47 @@
+@startuml
+
+
+
+package "pessoas" {
+    class Pessoa {
+        username 
+        password
+        email
+
+    }
+    class Usuario {
+        Anuncios
+
+    }
+    class Admin 
+
+}
+
+class Manga {
+    nome 
+    volume 
+    editora 
+    ano
+}
+
+class Troca {
+    Anuncio 1
+    Anuncio 2
+    status 
+
+}
+
+class Anuncio {
+    Manga 
+    fotos 
+    comentarios 
+
+}
+
+Usuario --|> Pessoa : extends
+Admin  --|> Usuario : extends
+Manga "*" --> Anuncio
+
+
+
+@enduml
